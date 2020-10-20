@@ -49,3 +49,4 @@ gem 'slim'
 
 gem 'alchemy_cms'
 gem 'alchemy-devise'
+gem 'alchemy-dragonfly-s3'
