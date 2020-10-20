@@ -1,0 +1,7 @@
+<%= element_view_for(element) do |el| %>
+  <h2 class="band-set-name sans-serif i"><%= el.render :name %></h2>
+
+  <% element.nested_elements.each do |nested_element| %>
+    <%= render_element nested_element %>
+  <% end %>
+<% end %>

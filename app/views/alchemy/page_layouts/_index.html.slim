@@ -1,0 +1,24 @@
+.mw9.center.ph3-ns
+  .cf.ph2-ns.mt3.mb3
+    .fl.w-100.w-70-ns.pa3
+      h1.f1.ttu.sans-serif.mb1.mt0.logo Keep This<br/>Moment<span>/com</span>
+      p.code.
+        Capturing highfives, stagedives and singalongs since 2007 till infinity
+    .fl.w-100.w-30-ns.pa3
+      = image_tag 'logo.svg', size: '60x60', class: 'g-image fr'
+
+.mw9.center.ph3-ns
+  .cf.ph2-ns.flex-wrap.flex
+    - Alchemy::Page.published.where(page_layout: 'post').each do |post|
+      - post_details = post.elements.where(name: 'post_details').last
+      - thumb = post_details.contents.find_by(name: 'thumb')
+
+      .fl.w-100.w-third-ns.pa3.code
+        a(href=show_alchemy_page_path(post))
+          img.mb3(
+            src=thumb.essence.picture_url(size: '13x8', crop: true)
+            data={ src: thumb.essence.picture_url(size: '427x250', crop: true) }
+            width="427"
+            height="250"
+          )
+        a.no-underline.black(href=show_alchemy_page_path(post)) = post.name

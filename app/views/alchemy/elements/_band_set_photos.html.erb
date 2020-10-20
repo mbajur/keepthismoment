@@ -1,0 +1,5 @@
+<%= band_set_photos_element_view_for(element) do |el| %>
+  <% element.nested_elements.each do |nested_element| %>
+    <%= render_element nested_element %>
+  <% end %>
+<% end %>

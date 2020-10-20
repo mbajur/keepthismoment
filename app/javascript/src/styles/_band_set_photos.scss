@@ -1,0 +1,23 @@
+.band_set_photos {
+  &.--wide {
+    width: 130%;
+    left: 50%;
+    position: relative;
+    transform: translatex(-50%);
+    max-width: 90vw;
+  }
+
+  &.--gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .band_set_photo {
+      flex: 1;
+    }
+  }
+
+  .band_set_photo + .band_set_photo {
+    margin-left: 1rem;
+  }
+}

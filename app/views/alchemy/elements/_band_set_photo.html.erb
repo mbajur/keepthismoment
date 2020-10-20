@@ -1,0 +1,11 @@
+<%= element_view_for(element) do |el| %>
+  <% ingredient = el.ingredient(:picture) %>
+  <% essence = el.essence(:picture) %>
+
+  <img
+    src="<%= essence.picture_url(size: '100x') %>"
+    data-src="<%= essence.picture_url %>"
+    width="<%= ingredient.image_file_width %>"
+    height="<%= ingredient.image_file_height %>"
+  />
+<% end %>

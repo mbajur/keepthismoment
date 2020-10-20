@@ -1,0 +1,54 @@
+# == In this configuration, you set up Alchemy's element layouts.
+#
+# For further information please see http://guides.alchemy-cms.com/stable/elements.html
+
+- name: article
+  hint: true
+  unique: true
+  contents:
+  - name: headline
+    type: EssenceText
+    default: :article_headline
+    hint: true
+  - name: picture
+    type: EssencePicture
+    hint: true
+  - name: text
+    type: EssenceRichtext
+    default: :article_text
+    hint: true
+
+- name: post_details
+  unique: true
+  contents:
+  - name: date
+    type: EssenceDate
+  - name: city
+    type: EssenceText
+  - name: thumb
+    type: EssencePicture
+
+- name: band_set_photos
+  unique: false
+  contents:
+  - name: width
+    type: EssenceSelect
+    settings:
+      select_values: ['regular', 'wide']
+  nestable_elements:
+  - band_set_photo
+
+- name: band_set_photo
+  unique: false
+  contents:
+  - name: picture
+    type: EssencePicture
+
+- name: band_set
+  unique: false
+  contents:
+  - name: name
+    type: EssenceText
+    default: :band_name
+  nestable_elements:
+  - band_set_photos
