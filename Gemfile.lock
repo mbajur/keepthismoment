@@ -91,7 +91,6 @@ GEM
       simple_form (>= 4.0, < 6)
       sprockets (>= 3.0, < 5)
       turbolinks (>= 2.5)
-    aspect_ratio (1.0.4)
     awesome_nested_set (3.2.0)
       activerecord (>= 4.0.0, < 7.0)
     bcrypt (3.1.13)
@@ -298,7 +297,6 @@ PLATFORMS
 DEPENDENCIES
   alchemy-devise
   alchemy_cms
-  aspect_ratio
   bootsnap (>= 1.4.2)
   byebug
   jbuilder (~> 2.7)
